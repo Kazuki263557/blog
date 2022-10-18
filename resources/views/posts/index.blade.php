@@ -15,6 +15,7 @@
     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                     </h2>
                     <p class='body'>{{ $post->body }}</p>
+                    [<a href='/posts/create'>create</a>]
                 </div>
             @endforeach
         </div>
