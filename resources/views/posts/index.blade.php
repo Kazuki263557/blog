@@ -16,6 +16,11 @@
                     </h2>
                     <p class='body'>{{ $post->body }}</p>
                     [<a href='/posts/create'>create</a>]
+                    <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post" style="display:inline">
+                          @csrf
+                          @method('DELETE')
+                          <button type="submit">delete</button> 
+                    </form>
                 </div>
             @endforeach
         </div>
